@@ -2,7 +2,7 @@ import type { Cipher } from "../types/cipher";
 
 export class CaesarCipher implements Cipher {
     id: number = 1;
-    alphabet: string = 'AĄBCĆDEĘFGHIJKLŁMNOÓPQRSŚTUVWXYZŹ';
+    alphabet: string = 'AĄBCĆDEĘFGHIJKLŁMNOÓPRSŚTUVWXYZŹ';
 
     encode(text: string, key: number = 3): string {
         return text.toUpperCase().split('').map(char => {
