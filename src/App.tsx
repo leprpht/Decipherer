@@ -4,6 +4,7 @@ import { Route, Routes, useNavigate } from 'react-router-dom';
 
 const CaesarView = lazy(() => import('./views/Caesar'));
 const PolybiusView = lazy(() => import('./views/Polibius'));
+const VigenereView = lazy(() => import('./views/Vigenere'));
 
 function App() {
   const nav = useNavigate();
@@ -33,6 +34,12 @@ function App() {
           >
             Polybius Cipher
           </button>
+          <button
+            onClick={() => nav('/vigenere')}
+            className="px-4 py-2 rounded hover:bg-emerald-500 transition"
+          >
+            Vigenère Cipher
+          </button>
         </div>
       </nav>
 
@@ -54,6 +61,7 @@ function App() {
             />
             <Route path="/caesar" element={<CaesarView />} />
             <Route path="/polybius" element={<PolybiusView />} />
+            <Route path="/vigenere" element={<VigenereView />} />
           </Routes>
         </Suspense>
       </main>
