@@ -3,10 +3,11 @@ import { lazy, Suspense } from 'react';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 
 const CaesarView = lazy(() => import('./views/Caesar'));
-const PolybiusView = lazy(() => import('./views/Polibius'));
+const PolybiusView = lazy(() => import('./views/Polybius'));
 const VigenereView = lazy(() => import('./views/Vigenere'));
 const PlayfairView = lazy(() => import('./views/Playfair'));
 const TrifidView = lazy(() => import('./views/Trifid'));
+const RSAView = lazy(() => import('./views/Rsa'));
 
 function App() {
   const nav = useNavigate();
@@ -54,6 +55,12 @@ function App() {
           >
             Trifid Cipher
           </button>
+          <button
+            onClick={() => nav('/rsa')}
+            className="px-4 py-2 rounded hover:bg-emerald-500 transition"
+          >
+            RSA Cipher
+          </button>
         </div>
       </nav>
 
@@ -78,6 +85,7 @@ function App() {
             <Route path="/vigenere" element={<VigenereView />} />
             <Route path="/playfair" element={<PlayfairView />} />
             <Route path="/trifid" element={<TrifidView />} />
+            <Route path="/rsa" element={<RSAView />} />
           </Routes>
         </Suspense>
       </main>
