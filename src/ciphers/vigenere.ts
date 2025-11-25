@@ -1,7 +1,6 @@
 import type { Cipher } from "../types/cipher";
 
 export class VigenereCipher implements Cipher {
-    id: number = 3;
     alphabet: string = 'AĄBCĆDEĘFGHIJKLŁMNOÓPRSŚTUVWXYZŹ';
 
     encode(text: string, key: unknown = ''): string {

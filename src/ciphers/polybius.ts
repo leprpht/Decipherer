@@ -1,7 +1,6 @@
 import type { Cipher } from "../types/cipher";
 
 export class PolybiusCipher implements Cipher {
-    id: number = 2;
     alphabet: string = "AĄBCĆDEĘFGHIJKLŁMNŃOÓPQRSŚTUVWXYZŹŻ";
 
     rows: number = 5;

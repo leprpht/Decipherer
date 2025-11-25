@@ -1,7 +1,6 @@
 import type { Cipher } from "../types/cipher";
 
 export class PlayfairCipher implements Cipher {
-  id: number = 4;
   alphabet: string = 'AĄBCĆDEĘFGHIJKLŁMNŃOÓPQRSŚTUVWXYZŹŻ';
 
   private rows = 5;

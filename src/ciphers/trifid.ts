@@ -1,8 +1,6 @@
 import type { Cipher } from "../types/cipher";
 
 export class TrifidCipher implements Cipher {
-  id: number = 7;
-
   private grids: string[][][] = [
     [['R', 'V', 'A'], ['N', 'I', 'C'], ['Q', 'O', 'Z']],
     [['E', 'J', 'B'], ['S', 'L', 'W'], ['Y', 'K', 'H']],
