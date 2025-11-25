@@ -6,6 +6,7 @@ const CaesarView = lazy(() => import('./views/Caesar'));
 const PolybiusView = lazy(() => import('./views/Polibius'));
 const VigenereView = lazy(() => import('./views/Vigenere'));
 const PlayfairView = lazy(() => import('./views/Playfair'));
+const TrifidView = lazy(() => import('./views/Trifid'));
 
 function App() {
   const nav = useNavigate();
@@ -47,6 +48,12 @@ function App() {
           >
             Playfair Cipher
           </button>
+          <button
+            onClick={() => nav('/trifid')}
+            className="px-4 py-2 rounded hover:bg-emerald-500 transition"
+          >
+            Trifid Cipher
+          </button>
         </div>
       </nav>
 
@@ -70,6 +77,7 @@ function App() {
             <Route path="/polybius" element={<PolybiusView />} />
             <Route path="/vigenere" element={<VigenereView />} />
             <Route path="/playfair" element={<PlayfairView />} />
+            <Route path="/trifid" element={<TrifidView />} />
           </Routes>
         </Suspense>
       </main>
