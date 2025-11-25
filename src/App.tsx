@@ -3,6 +3,7 @@ import { lazy, Suspense } from 'react';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 
 const CaesarView = lazy(() => import('./views/Caesar'));
+const PolybiusView = lazy(() => import('./views/Polibius'));
 
 function App() {
   const nav = useNavigate();
@@ -26,6 +27,12 @@ function App() {
           >
             Caesar Cipher
           </button>
+          <button
+            onClick={() => nav('/polybius')}
+            className="px-4 py-2 rounded hover:bg-emerald-500 transition"
+          >
+            Polybius Cipher
+          </button>
         </div>
       </nav>
 
@@ -46,6 +53,7 @@ function App() {
               }
             />
             <Route path="/caesar" element={<CaesarView />} />
+            <Route path="/polybius" element={<PolybiusView />} />
           </Routes>
         </Suspense>
       </main>
