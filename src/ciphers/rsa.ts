@@ -13,7 +13,6 @@ export interface RSAKeyPrivate {
 export type RSAKey = RSAKeyPublic | RSAKeyPrivate;
 
 export class RSACipher implements Cipher {
-  id = 8;
   alphabet = "";
 
   public publicKey: { n: bigint; e: bigint } | undefined;
