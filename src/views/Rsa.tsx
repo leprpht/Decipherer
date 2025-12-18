@@ -215,7 +215,7 @@ function RSAView() {
             />
             <div className="flex gap-3 mt-2">
               <button
-                className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-500 transition font-semibold"
+                className="bg-emerald-200 text-emerald-800 px-4 py-2 rounded-lg hover:bg-emerald-300 transition font-semibold"
                 onClick={handleLoadPublicKey}
               >
                 Load Public Key (set on cipher)
@@ -234,7 +234,7 @@ function RSAView() {
             />
             <div className="flex gap-3 mt-2">
               <button
-                className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-500 transition font-semibold"
+                className="bg-emerald-200 text-emerald-800 px-4 py-2 rounded-lg hover:bg-emerald-300 transition font-semibold"
                 onClick={handleLoadPrivateKey}
               >
                 Load Private Key (set on cipher)
