@@ -1,7 +1,7 @@
 import type { Cipher } from "../types/cipher";
 
 export class VigenereCipher implements Cipher {
-    alphabet: string = 'AĄBCĆDEĘFGHIJKLŁMNOÓPRSŚTUVWXYZŹ';
+    alphabet: string = 'AĄBCĆDEĘFGHIJKLŁMNOÓPRSŚTUVWXYZŹŻ';
 
     encode(text: string, key: unknown = ''): string {
         const rawKey = String(key ?? '').toUpperCase();
